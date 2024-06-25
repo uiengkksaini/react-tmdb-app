@@ -1,3 +1,8 @@
+# How to run this project?
+1. Create an account on TMDB(https://www.themoviedb.org/) to get the _API_KEY_AUTH_ from there and add it into the tmdbAxios.ts file in this repo.
+2. Run **npm i** command to install node_modules.
+3. Run **npm run dev** command to serve the project.
+
 # React + TypeScript + Vite
 
 This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.

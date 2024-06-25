@@ -1,0 +1,14 @@
+.movieReviewContainer {
+  max-height: 300px;
+  overflow-y: auto;
+}
+.movieReviewContainer::-webkit-scrollbar {
+  width: 4px;
+}
+.movieReviewContainer::-webkit-scrollbar-track {
+  background-color: transparent;
+}
+.movieReviewContainer::-webkit-scrollbar-thumb {
+  background-color: #ccc;
+  border-radius: 4px;
+}

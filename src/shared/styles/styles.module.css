@@ -1,0 +1,42 @@
+.textEllipsis {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.scrollHorizontal {
+  display: flex;
+  align-items: center;
+  flex-wrap: nowrap;
+  gap: 16px;
+  overflow-x: auto;
+}
+.scrollHorizontal::-webkit-scrollbar {
+  height: 4px;
+}
+.scrollHorizontal::-webkit-scrollbar-track {
+  background-color: transparent;
+}
+.scrollHorizontal::-webkit-scrollbar-thumb {
+  background-color: #ccc;
+  border-radius: 4px;
+}
+
+.mainContainer {
+  min-width: 250px;
+  height: auto;
+}
+
+.contentContainer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.width {
+  width: 300px;
+}
+
+.minWidth {
+  min-width: 150px;
+}

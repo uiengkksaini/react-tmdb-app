@@ -1,0 +1,1 @@
+1. redux, react-redux, redux-toolkit, redux-thunk, persist-redux

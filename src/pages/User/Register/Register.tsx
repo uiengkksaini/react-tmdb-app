@@ -9,19 +9,18 @@ import {
 } from "@mui/material";
 import { Link } from "react-router-dom";
 import { buttonAlignment, container, loginLink, marginBottom } from "./style";
-import { Helmet } from "react-helmet";
+import ReactHelmet from "../../../Components/ReactHelmet/ReactHelmet";
 
 const Register: React.FC = () => {
   return (
     <Container maxWidth="xl">
-      <Helmet>
-        <title>Register</title>
-      </Helmet>
+      <ReactHelmet detail={{ title: "Registration- MyTMDB App" }} />
       <Grid container justifyContent="center" my={5}>
         <Grid item xs={12} sm={8} md={7} lg={6} xl={6}>
           <Paper elevation={4} sx={container}>
             <Typography variant="h4" mb={2}>
-              Register
+              Welcome!
+              <Typography variant="body1"> to the MyTMDB App</Typography>
             </Typography>
             <TextField
               label="Full Name"

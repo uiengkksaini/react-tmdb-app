@@ -8,14 +8,13 @@ import {
   Typography,
 } from "@mui/material";
 import { buttonAlignment, container, marginBottom } from "../Register/style";
-import { Helmet } from "react-helmet";
+import ReactHelmet from "../../../Components/ReactHelmet/ReactHelmet";
 
 const ForgotPassword: React.FC = () => {
   return (
     <Container maxWidth="xl">
-      <Helmet>
-        <title>Forgot Password</title>
-      </Helmet>
+      <ReactHelmet detail={{ title: "Forgot Password- MyTMDB App" }} />
+
       <Grid container justifyContent="center" my={5}>
         <Grid item xs={12} sm={8} md={7} lg={6} xl={6}>
           <Paper elevation={4} sx={container}>

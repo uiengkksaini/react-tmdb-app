@@ -15,7 +15,7 @@ import MovieCard from "../../../Components/MovieCard/MovieCard";
 import { MovieProps } from "../../../shared/interface/interface";
 import DataNotFound from "../../../Components/DataNotFound/DataNotFound";
 import globalStyles from "../../../shared/styles/styles.module.css";
-import { Helmet } from "react-helmet";
+import ReactHelmet from "../../../Components/ReactHelmet/ReactHelmet";
 
 const MovieSearch: React.FC = () => {
   const [query, setQuery] = useState<string>("");
@@ -66,9 +66,8 @@ const MovieSearch: React.FC = () => {
 
   return (
     <Box sx={mainContainer}>
-      <Helmet>
-        <title>Search Your Movies..</title>
-      </Helmet>
+      <ReactHelmet detail={{ title: "Search Your Movies- MyTMDB App" }} />
+
       <Box sx={headerContainer}>
         <Container maxWidth="xl">
           <Box sx={searchContainer}>

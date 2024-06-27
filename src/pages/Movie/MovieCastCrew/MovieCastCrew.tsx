@@ -12,7 +12,7 @@ import Loader from "../../../Components/Loader/Loader";
 import MovieCCCard from "../../../Components/MovieCCCard/MovieCCCard";
 import { IMAGE_BASE_URL } from "../../../const";
 import { KeyboardBackspace } from "@mui/icons-material";
-import { Helmet } from "react-helmet";
+import ReactHelmet from "../../../Components/ReactHelmet/ReactHelmet";
 
 const MovieCastCrew: React.FC = () => {
   const params = useParams();
@@ -67,9 +67,8 @@ const MovieCastCrew: React.FC = () => {
 
   return (
     <Box>
-      <Helmet>
-        <title>Cast & Crew of {`${movie?.title ?? ""}`}</title>
-      </Helmet>
+      <ReactHelmet detail={{ title: `${movie?.title ?? ""}` }} />
+
       <Box
         sx={[
           {

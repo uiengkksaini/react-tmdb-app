@@ -1,12 +1,10 @@
 import { Container, Box, Typography } from "@mui/material";
-import { Helmet } from "react-helmet";
+import ReactHelmet from "../../../Components/ReactHelmet/ReactHelmet";
 
 const LandingPage: React.FC = () => {
   return (
     <Container maxWidth="xl">
-      <Helmet>
-        <title>HomePage</title>
-      </Helmet>
+      <ReactHelmet detail={{ title: "Homepage- MyTMDB App" }} />
       <Box my={5}>
         <Typography variant="h5">LandingPage</Typography>
         <Typography variant="body1">

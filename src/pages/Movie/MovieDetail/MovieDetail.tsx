@@ -21,7 +21,7 @@ import {
   posterImage,
   sliderContainer,
 } from "./style";
-import { Helmet } from "react-helmet";
+import ReactHelmet from "../../../Components/ReactHelmet/ReactHelmet";
 
 const MovieDetail = () => {
   const [loading, setLoading] = useState(true);
@@ -61,9 +61,8 @@ const MovieDetail = () => {
   };
   return (
     <Box>
-      <Helmet>
-        <title>Detail of {`${movieDetail?.title ?? ""}`}</title>
-      </Helmet>
+      <ReactHelmet detail={{ title: `${movieDetail?.title ?? ""}` }} />
+
       {loading ? (
         <Loader />
       ) : (

@@ -6,7 +6,6 @@ import {
   Select,
   SelectChangeEvent,
 } from "@mui/material";
-import { Helmet } from "react-helmet";
 import MovieCard from "../../../Components/MovieCard/MovieCard";
 import { useEffect, useState } from "react";
 import tmdbAxios from "../../../tmdbAxios";
@@ -14,6 +13,7 @@ import MovieCardSkelton from "../../../Components/Skelton/MovieCardSkelton/Movie
 import { MovieProps } from "../../../shared/interface/interface";
 import DataNotFound from "../../../Components/DataNotFound/DataNotFound";
 import styles from "./styles.module.css";
+import ReactHelmet from "../../../Components/ReactHelmet/ReactHelmet";
 
 const Movies: React.FC = () => {
   const [loading, setLoading] = useState(true);
@@ -50,9 +50,8 @@ const Movies: React.FC = () => {
 
   return (
     <Container maxWidth="xl">
-      <Helmet>
-        <title>Movies List</title>
-      </Helmet>
+      <ReactHelmet detail={{ title: "Movie List- MyTMDB App" }} />
+
       <Box my={4}>
         <FormControl style={{ marginLeft: "auto" }}>
           <Select value={movieCategory} onChange={handleSelectedValue}>

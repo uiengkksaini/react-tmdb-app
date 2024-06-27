@@ -7,7 +7,7 @@ import { IMAGE_BASE_URL } from "../../../const";
 import MovieCard from "../../../Components/MovieCard/MovieCard";
 import globalStyles from "../../../shared/styles/styles.module.css";
 import Loader from "../../../Components/Loader/Loader";
-import { Helmet } from "react-helmet";
+import ReactHelmet from "../../../Components/ReactHelmet/ReactHelmet";
 
 const MoviePerson: React.FC = () => {
   const [loading, setLoading] = useState<boolean>(true);
@@ -57,9 +57,8 @@ const MoviePerson: React.FC = () => {
 
   return (
     <Container maxWidth="xl">
-      <Helmet>
-        <title>{`${person?.name ?? ""}`}</title>
-      </Helmet>
+      <ReactHelmet detail={{ title: `${person?.name ?? ""}` }} />
+
       <Box sx={{ display: "flex", gap: 3 }} my={5}>
         <Box>
           <Box sx={{ height: 450, width: 300, borderRadius: 8 }}>

@@ -1,15 +1,13 @@
 import { Box, Container, Typography } from "@mui/material";
-import { Helmet } from "react-helmet";
+import { aboutus } from "./style";
+import ReactHelmet from "../../../Components/ReactHelmet/ReactHelmet";
 
 const Aboutus: React.FC = () => {
   return (
     <Box>
-      <Helmet>
-        <title>AboutUs</title>
-      </Helmet>
-      <Box sx={{ width: "100%", overflow: "hidden" }}>
-        <img src="https://picsum.photos/4000/400" alt="bannerimage" />
-      </Box>
+      <ReactHelmet detail={{ title: "Aboutus- MyTMDB App" }} />
+
+      <Box sx={aboutus}></Box>
       <Container maxWidth={"xl"}>
         <Box>
           <Typography variant="h3" mt={4}>

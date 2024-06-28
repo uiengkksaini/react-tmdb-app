@@ -1,1 +1,11 @@
-1. redux, react-redux, redux-toolkit, redux-thunk, persist-redux
+Used Packages in application
+1.   React Router DOM
+2.   React helmet
+3.   dotenv
+4.   axios
+5.   @mui/material
+6.   @mui/icons-material
+7.   formik
+8.   yup
+9. 
+10. 

@@ -8,8 +8,9 @@ import MovieCard from "../../../Components/MovieCard/MovieCard";
 import globalStyles from "../../../shared/styles/styles.module.css";
 import Loader from "../../../Components/Loader/Loader";
 import ReactHelmet from "../../../Components/ReactHelmet/ReactHelmet";
+import SocialMedia from "../SocialMedia/SocialMedia";
 
-const MoviePerson: React.FC = () => {
+const PersonalInfo: React.FC = () => {
   const [loading, setLoading] = useState<boolean>(true);
   const [person, setPerson] = useState<PersonDetail | null>(null);
   const [knownFor, setKnownFor] = useState<MovieProps[] | null>(null);
@@ -17,7 +18,7 @@ const MoviePerson: React.FC = () => {
   const params = useParams();
   const person_id = params.movieID?.split("-")[0];
 
-  const fetchPerson = async () => {
+  const fetchPersonalInfo = async () => {
     setLoading(true);
     try {
       const response = await tmdbAxios.get(`/person/${person_id}`);
@@ -33,7 +34,7 @@ const MoviePerson: React.FC = () => {
       setLoading(false);
     }
   };
-  const fetchPersonKnowFor = async () => {
+  const fetchPersonalInfoKnowFor = async () => {
     setLoading(true);
     try {
       const response = await tmdbAxios.get(
@@ -51,8 +52,8 @@ const MoviePerson: React.FC = () => {
     }
   };
   useEffect(() => {
-    fetchPerson();
-    fetchPersonKnowFor();
+    fetchPersonalInfo();
+    fetchPersonalInfoKnowFor();
   }, [person_id]);
 
   return (
@@ -72,6 +73,7 @@ const MoviePerson: React.FC = () => {
               }}
             />
           </Box>
+          <SocialMedia personId={person_id} />
           <Box mt={2}>
             <Typography variant="h5" mb={2} fontWeight={600}>
               Personal Info
@@ -171,4 +173,4 @@ const MoviePerson: React.FC = () => {
   );
 };
 
-export default MoviePerson;
+export default PersonalInfo;

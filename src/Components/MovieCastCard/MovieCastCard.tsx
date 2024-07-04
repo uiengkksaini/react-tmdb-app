@@ -15,7 +15,7 @@ const MovieCastCard: React.FC<CastCardProps> = ({ cast }) => {
   const { id, profile_path, character, name } = cast;
   const navigate = useNavigate();
   const navigateToDetail = () => {
-    navigate(`/person/${id}-${name.split(" ").join("-")}`);
+    navigate(`/personal-info/${id}-${name.split(" ").join("-")}`);
   };
   return (
     <Card sx={{ height: "250px", minWidth: 150 }}>

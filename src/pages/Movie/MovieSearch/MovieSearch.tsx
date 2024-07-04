@@ -102,7 +102,7 @@ const MovieSearch: React.FC = () => {
         <Box sx={resultContainer}>
           {loading
             ? Array.from({ length: 4 }).map((_, index) => (
-                <MovieCardSkelton key={index} />
+                <MovieCardSkelton key={index+'card-skelton'} />
               ))
             : movies?.map((movie: MovieProps) => (
                 <MovieCard

@@ -43,7 +43,7 @@ const MovieRecommendation: React.FC<MovieIdProps> = ({ movieId }) => {
         <Box className={globalStyles.scrollHorizontal}>
           {loading ? (
             Array.from({ length: 5 }).map((_, index: number) => (
-              <MovieRecommendationSkelton key={index} />
+              <MovieRecommendationSkelton key={index+'recommendation-skelton'} />
             ))
           ) : (
             <>

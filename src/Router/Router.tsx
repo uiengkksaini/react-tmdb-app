@@ -11,7 +11,7 @@ import Contactus from "../pages/Public/Contactus/Contactus";
 import AddMovie from "../pages/Movie/AddMovie/AddMovie";
 import MovieSearch from "../pages/Movie/MovieSearch/MovieSearch";
 import MovieCastCrew from "../pages/Movie/MovieCastCrew/MovieCastCrew";
-import MoviePerson from "../pages/Movie/MoviePerson/MoviePerson";
+import PersonalInfo from "../pages/Movie/PersonalInfo/PersonalInfo";
 import ForgotPassword from "../pages/User/ForgotPassword/ForgotPassword";
 
 const Router = () => {
@@ -39,7 +39,7 @@ const Router = () => {
             },
             { path: "search", element: <MovieSearch /> },
             { path: "top-cast-crew/:movieID", element: <MovieCastCrew /> },
-            { path: "person/:movieID", element: <MoviePerson /> },
+            { path: "personal-info/:movieID", element: <PersonalInfo /> },
           ],
         },
       ],

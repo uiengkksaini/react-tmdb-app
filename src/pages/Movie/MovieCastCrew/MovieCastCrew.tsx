@@ -123,7 +123,7 @@ const MovieCastCrew: React.FC = () => {
             ) : (
               <Box>
                 {castCrew?.cast.map((cas, index) => (
-                  <MovieCCCard person={cas} key={index} />
+                  <MovieCCCard person={cas} key={index + "cast-card"} />
                 ))}
               </Box>
             )}
@@ -138,7 +138,7 @@ const MovieCastCrew: React.FC = () => {
             ) : (
               <Box>
                 {castCrew?.crew.map((cre, index) => (
-                  <MovieCCCard person={cre} key={index} />
+                  <MovieCCCard person={cre} key={index + "cast-crew"} />
                 ))}
               </Box>
             )}

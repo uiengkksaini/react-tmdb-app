@@ -45,7 +45,7 @@ const MovieReview: React.FC<MovieIdProps> = ({ movieId }) => {
       <Box className={styles.movieReviewContainer} my={2}>
         {loading ? (
           Array.from({ length: 5 }).map((_, index: number) => (
-            <MovieReviewSkelton key={index} />
+            <MovieReviewSkelton key={index+'review-skelton'} />
           ))
         ) : (
           <>

@@ -1,5 +1,5 @@
-import { Person } from "../../shared/interface/interface";
+import { PersonalInfo } from "../../shared/interface/interface";
 
 export interface MovieCastCardProps {
-  person: Person;
+  person: PersonalInfo;
 }

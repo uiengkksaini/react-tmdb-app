@@ -43,7 +43,7 @@ const SimiliarMovies: React.FC<MovieIdProps> = ({ movieId }) => {
       <Box className={`${globalStyles.scrollHorizontal}`}>
         {loading ? (
           Array.from({ length: 5 }).map((_, index) => (
-            <MovieCardSkelton key={index} />
+            <MovieCardSkelton key={index+'similar-skelton'} />
           ))
         ) : (
           <>

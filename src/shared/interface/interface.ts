@@ -108,7 +108,7 @@ export interface MovieTopCastProps {
   cast: CastProps[];
   crew: CrewProps[];
 }
-export interface Person {
+export interface PersonalInfo {
   id: number;
   profile_path?: string;
   name: string;

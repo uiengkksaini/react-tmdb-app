@@ -8,7 +8,7 @@ const MovieCCCard: React.FC<MovieCastCardProps> = ({ person }) => {
 const person_name=  person.name.split(' ').join('-');  
   return (
     <Box sx={container}>
-      <Link to={`/person/${person.id}-${person_name}`}>
+      <Link to={`/personal-info/${person.id}-${person_name}`}>
         <Box sx={imageContainerStyle}>
           <img
             src={`${IMAGE_BASE_URL}${person?.profile_path}`}
@@ -18,7 +18,7 @@ const person_name=  person.name.split(' ').join('-');
         </Box>
       </Link>
       <Box ml={2}>
-        <Link to={`/person/${person.id}-${person_name}`} style={linkStyle}>
+        <Link to={`/personal-info/${person.id}-${person_name}`} style={linkStyle}>
           {person?.character || person?.job}
         </Link>
         <Typography variant="body1">{person?.name}</Typography>

@@ -73,7 +73,7 @@ const Movies: React.FC = () => {
           {loading ? (
             <>
               {Array.from({ length: 20 }).map((_, index) => (
-                <MovieCardSkelton key={index} />
+                <MovieCardSkelton key={index + "movielist"} />
               ))}
             </>
           ) : (
